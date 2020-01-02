@@ -1,19 +1,20 @@
-Expo Mixpanel Analytics
+`@mollie/expo-mixpanel-analytics`
 =========
 
-Mixpanel integration for use with React Native apps built on Expo.
+Mixpanel integration for use with React Native apps built on Expo. This package is based on `@benawad/expo-mixpanel-analytics`, but does not store the device name in Mixpanel for privacy reasons.
 
 ## Installation
 
 ```
-npm install @benawad/expo-mixpanel-analytics --save
+yarn add @mollie/expo-mixpanel-analytics
 ```
 
 ## Import
 
 Your React Native app's screen resolution, app name, app ID, app version, device information and multiple other parameters will be automatically resolved and sent with each event.
+
 ```
-import ExpoMixpanelAnalytics from '@benawad/expo-mixpanel-analytics';
+import ExpoMixpanelAnalytics from '@mollie/expo-mixpanel-analytics';
 ```
 
 ## Usage
@@ -41,8 +42,7 @@ analytics.people_union({ "Items purchased": ["socks", "shirts"] });
 analytics.people_delete_user();
 
 analytics.reset();
-
 ```
 
 ## References
-https://mixpanel.com/help/reference/http
+`https://mixpanel.com/help/reference/http`
