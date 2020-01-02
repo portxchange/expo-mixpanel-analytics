@@ -18,7 +18,6 @@ export class ExpoMixpanelAnalytics {
   appId?: string;
   appVersion?: string;
   screenSize?: string;
-  deviceName?: string;
   platform?: string;
   model?: string;
   osVersion: string | number;
@@ -41,7 +40,7 @@ export class ExpoMixpanelAnalytics {
       this.appId = Constants.manifest.slug;
       this.appVersion = Constants.manifest.version;
       this.screenSize = `${width}x${height}`;
-      this.deviceName = Constants.deviceName;
+
       if (isIosPlatform && Constants.platform && Constants.platform.ios) {
         this.platform = Constants.platform.ios.platform;
         this.model = Constants.platform.ios.model;
@@ -158,7 +157,7 @@ export class ExpoMixpanelAnalytics {
     data.properties.app_version = this.appVersion;
     data.properties.screen_size = this.screenSize;
     data.properties.client_id = this.clientId;
-    data.properties.device_name = this.deviceName;
+
     if (this.platform) {
       data.properties.platform = this.platform;
     }
