@@ -56,6 +56,7 @@ export class ExpoMixpanelAnalytics {
         }
 
         this.ready = true;
+        
         this.identify(this.clientId);
         this._flush();
       });
@@ -74,6 +75,7 @@ export class ExpoMixpanelAnalytics {
       name,
       props
     });
+
     this._flush();
   }
 
@@ -83,6 +85,7 @@ export class ExpoMixpanelAnalytics {
 
   reset() {
     this.identify(this.clientId);
+
     try {
       AsyncStorage.setItem(ASYNC_STORAGE_KEY, JSON.stringify({}));
     } catch {}
@@ -147,9 +150,11 @@ export class ExpoMixpanelAnalytics {
         ...this.superProps
       }
     };
+
     if (this.userId) {
       data.properties.distinct_id = this.userId;
     }
+
     data.properties.token = this.token;
     data.properties.user_agent = this.userAgent;
     data.properties.app_name = this.appName;
@@ -161,9 +166,11 @@ export class ExpoMixpanelAnalytics {
     if (this.platform) {
       data.properties.platform = this.platform;
     }
+
     if (this.model) {
       data.properties.model = this.model;
     }
+
     if (this.osVersion) {
       data.properties.os_version = this.osVersion;
     }
