@@ -1,6 +1,6 @@
 {
-  "name": "@benawad/expo-mixpanel-analytics",
-  "version": "0.1.7",
+  "name": "@mollie/expo-mixpanel-analytics",
+  "version": "0.0.1",
   "description": "Mixpanel integration for use with React Native apps built on Expo.",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
@@ -18,6 +18,17 @@
     "expo",
     "mixpanel",
     "analytics"
+  ],
+  "contributors": [
+    {
+      "name": "Ben Awad",
+      "url": "https://github.com/benawad"
+    },
+    {
+      "name": "Vernon de Goede",
+      "email": "vernon@mollie.com",
+      "url": "https://www.mollie.com"
+    }
   ],
   "author": "Ben Awad",
   "license": "MIT",
