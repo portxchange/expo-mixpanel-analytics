@@ -47,6 +47,7 @@
     "@types/expo": "^32.0.10",
     "@types/react-native": "^0.57.43",
     "rimraf": "^2.6.3",
+    "tslib": "^1.10.0",
     "typescript": "^3.4.3"
   }
 }
