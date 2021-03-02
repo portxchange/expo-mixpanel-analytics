@@ -19,7 +19,7 @@ export class ExpoMixpanelAnalytics {
   appVersion?: string;
   screenSize?: string;
   platform?: string;
-  model?: string;
+  model?: string | null;
   osVersion: string | number;
   queue: any[];
   superProps: any = {};
