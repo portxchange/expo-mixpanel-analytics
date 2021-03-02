@@ -4,7 +4,7 @@ import { Buffer } from "buffer";
 
 const { width, height } = Dimensions.get("window");
 
-const MIXPANEL_API_URL = "https://api.mixpanel.com";
+const MIXPANEL_API_URL = "https://api-eu.mixpanel.com";
 const ASYNC_STORAGE_KEY = "mixpanel:super:props";
 const isIosPlatform = Platform.OS === "ios";
 
@@ -34,7 +34,7 @@ export class ExpoMixpanelAnalytics {
     this.osVersion = Platform.Version;
     this.superProps;
 
-    Constants.getWebViewUserAgentAsync().then(userAgent => {
+    Constants.getWebViewUserAgentAsync().then((userAgent) => {
       this.userAgent = userAgent;
       this.appName = Constants.manifest.name;
       this.appId = Constants.manifest.slug;
@@ -56,7 +56,7 @@ export class ExpoMixpanelAnalytics {
         }
 
         this.ready = true;
-        
+
         this.identify(this.clientId);
         this._flush();
       });
@@ -73,7 +73,7 @@ export class ExpoMixpanelAnalytics {
   track(name: string, props?: any) {
     this.queue.push({
       name,
-      props
+      props,
     });
 
     this._flush();
@@ -134,7 +134,7 @@ export class ExpoMixpanelAnalytics {
     if (this.userId) {
       const data = {
         $token: this.token,
-        $distinct_id: this.userId
+        $distinct_id: this.userId,
       };
       data[`$${operation}`] = props;
 
@@ -147,8 +147,8 @@ export class ExpoMixpanelAnalytics {
       event: event.name,
       properties: {
         ...(event.props || {}),
-        ...this.superProps
-      }
+        ...this.superProps,
+      },
     };
 
     if (this.userId) {
