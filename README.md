@@ -1,12 +1,11 @@
-`@mollie/expo-mixpanel-analytics`
-=========
+# `@portxchange/expo-mixpanel-analytics`
 
-Mixpanel integration for use with React Native apps built on Expo. This package is based on `@benawad/expo-mixpanel-analytics`, but does not store the device name in Mixpanel for privacy reasons.
+Mixpanel integration for use with React Native apps built on Expo. This package is based on Mollie's fork of `@benawad/expo-mixpanel-analytics`, but does not store the device name in Mixpanel for privacy reasons, and also connects to the EU endpoint of Mixpanel for GDPR compliance.
 
 ## Installation
 
 ```
-yarn add @mollie/expo-mixpanel-analytics
+yarn add @portxchange/expo-mixpanel-analytics
 ```
 
 ## Import
@@ -14,10 +13,11 @@ yarn add @mollie/expo-mixpanel-analytics
 Your React Native app's screen resolution, app name, app ID, app version, device information and multiple other parameters will be automatically resolved and sent with each event.
 
 ```
-import ExpoMixpanelAnalytics from '@mollie/expo-mixpanel-analytics';
+import ExpoMixpanelAnalytics from '@portxchange/expo-mixpanel-analytics';
 ```
 
 ## Usage
+
 ```
 const analytics = new ExpoMixpanelAnalytics("5224da5bbbed3fdeaad0911820f1bf2x");
 
@@ -45,4 +45,5 @@ analytics.reset();
 ```
 
 ## References
+
 `https://mixpanel.com/help/reference/http`
