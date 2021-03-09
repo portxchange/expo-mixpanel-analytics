@@ -1,6 +1,6 @@
 {
   "name": "@portxchange/expo-mixpanel-analytics",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Mixpanel integration for use with React Native apps built on Expo.",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
